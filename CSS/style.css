@@ -1,0 +1,75 @@
+*{
+    font-family: 'Roboto','Arial', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.logo img{
+    height: 75px;
+    margin: 5px;
+}
+.container-header{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.fix-header{
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+.nav a{
+    color: navy;
+    text-decoration: none;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: 520;
+}
+
+.giohang{
+    width: 270px;
+    display: flex;
+    align-items: center;
+}
+
+.search-group{
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.search-input{
+    font-size: 13px;
+    height: 23px;
+    width: 180px;
+    border-style: ridge;
+    border-color: navy;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.search-button{
+    height: 29px;
+    width: 29px;
+    background-color: transparent;
+    border-style: none;
+    position: relative;
+    right: 26px;
+}
+
+.giohang-icon img{
+    height: 40px;
+}
+
+.giohang-letter{
+    color: navy;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 520;
+}
+

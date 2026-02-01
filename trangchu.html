@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Trang chủ</title>
+    <link rel="shortcut icon" href="/images/logo1.png">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/trangchu.css">
 </head>
 <body>
-    <h1>Hello everyone đây là nhóm 2</h1>
+    <header class="fix-header">
+        <div class="container-header">
+            <div class="logo">
+                <a href="/trangchu.html">
+                    <img src="/images/logo2.png" alt="">
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="/trangchu.html">TRANG CHỦ</a>
+                <a href="">GIỚI THIỆU</a>
+                <a href="">SẢN PHẨM</a>
+                <a href="">ĐĂNG NHẬP</a>
+                <a href="">ĐĂNG KÍ</a>
+            </nav>
+            <div class="giohang">
+                <form action="">
+                    <div class="search-group">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm" class="search-input">
+                        <button type="submit" class="search-button"><img src="/images/search_icon.png" ></button>
+                    </div>
+                </form>
+                <div class="giohang-icon">
+                    <a href="">
+                        <img src="/images/giohang.png" alt=""><br>
+                    </a>
+                    <a class="giohang-letter" href="">Giỏ hàng</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article>
+            <section class="banner">
+                <img class="anh-banner" src="/images/trangchu/banner.png" alt="">
+                <div class="tieude-banner">
+                    <p class="b1">NỘI THẤT VELLA</p>
+                    <p class="b2">Chất Lượng Bền Vững <br> Dẫn Đầu Giải Pháp Nội Thất Việt</p>
+                    <p class="b3">An Tâm Đồng Hành Dài Lâu</p>
+                    <div class="b4"><a href="">Xem chi tiết</a></div>
+                </div>
+            </section>
+            <section class="danhmucphong">
+                <div>
+                    <h2>Phòng Khách</h2>
+                    <img  src="/images/trangchu/phongkhach.png" alt="">
+                </div>
+                <div>
+                    <h2>Phòng Bếp</h2>
+                    <img  src="/images/trangchu/phongbep.png" alt="">
+                </div>
+                <div>
+                    <h2>Phòng Ngủ</h2>
+                    <img  src="/images/trangchu/phongngu.png" alt="">
+                </div>
+            </section>
+        </article>
+    </main>
+
 </body>
 </html>
