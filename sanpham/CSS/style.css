@@ -31,9 +31,11 @@
     font-weight: 520;
 }
 .slider {
-    width: 100%;
+    width: 85%;
     overflow: hidden;
     border: 2px solid black;
+    margin: 0 auto;
+
 }
 .slides {
   display: flex;
@@ -44,6 +46,7 @@
 .slides img {
     width: 400px;
     height: 250px;
+    border: solid 2px red;
 }
 @keyframes scroll {
   0%   { transform: translateX(0); }
@@ -51,7 +54,7 @@
 }
 article {
     width: 1600px;
-    margin: 20px 10px;
+    margin: 0px auto;
     padding: 20px;
 }
 article h3 {
@@ -60,10 +63,12 @@ article h3 {
 }
 article h4 {
     font-size: 25px;
+    padding-left: 10px;
 }
 article h5 {
     float: left;
     font-size: 20px;
+    padding-left: 10px;
 }
 article h6 {
     font-size: 20px;
