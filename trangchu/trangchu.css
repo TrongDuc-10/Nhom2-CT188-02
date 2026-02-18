@@ -1,0 +1,176 @@
+.banner{
+    position: relative;
+}
+.anh-banner{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.tieude-banner{
+    position: absolute;
+    top: 80px;
+    left: 460px;
+}
+
+.b1{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 47px;
+    color: rgb(7, 7, 103);
+    margin: auto;
+}
+
+.b2{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 55px;
+    color: rgb(13, 13, 120);
+    margin: auto;
+}
+
+.b3{
+    font-family: 'Montserrat';
+    font-weight: 380;
+    font-size: 25px;
+    color: rgb(7, 7, 103);
+    margin: auto;
+}
+
+.tieude-banner a{
+    text-decoration: none;
+    width: 150px;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    color: rgb(7, 7, 103);
+    border: 1px solid;
+    border-color: rgb(7, 7, 103);
+    padding: 3px;    
+}
+
+.b4{
+    margin-top: 50px;
+}
+
+
+
+.danhmucphong{
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.danhmucphong h2{
+    text-align: center;
+    background-color: rgb(49, 49, 166);
+    color: white;
+    padding: 10px;
+    margin: auto;
+}
+
+.danhmucphong img{
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.best-seller{
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 15px;
+    background-image: linear-gradient(rgb(126, 126, 203),rgb(210, 220, 254));
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.tieude-bestseller{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid;
+    border-color: rgb(65, 65, 180);
+}
+
+.tieude-bestseller h1{
+    color: white;
+    background-color: rgb(49, 49, 166);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0px;
+    
+}
+
+.tieude-bestseller a{
+    text-decoration: none;
+    color: navy;
+}
+
+.noidung-bestseller{
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-around;
+}
+
+.noidung-bestseller div{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.noidung-bestseller img{
+    width: 380px;
+    height: 380px;
+    border-radius: 10px;
+    
+}
+
+.sp {
+    padding: 10px;
+}
+
+.sp h3{
+    font-family: 'Nunito';
+    font-size: 20px;
+}
+
+.sp p{
+    font-family: 'Nunito';
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.gia-moi{
+    color: red;
+    font-size: 20px;
+}
+
+.gia-cu{
+    color: grey;
+    text-decoration: line-through;
+    font-size: 17px;
+}
+
+.them_vao_gio_hang{
+    background-color: rgb(116, 116, 191);
+    color: white;
+    font-family: 'Nunito';
+    font-size: 26px;
+    width: 300px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 10px;
+    padding: 6px;
+    margin-top: 10px;
+}
+
+.them_vao_gio_hang:hover{
+    background-color: rgb(56, 56, 154);
+}
+
+.them_vao_gio_hang:active{
+    background-color: navy;
+}
+
