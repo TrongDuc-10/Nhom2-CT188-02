@@ -183,6 +183,9 @@ article .list .items #other{
 article .list .items img {
     width: 100%;
     height: auto;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
     margin-right: 10px;
 }
 
@@ -197,7 +200,6 @@ footer{
 .container-footer{
     display: flex;
     justify-content: space-evenly;
-    
     padding: 20px;
 }
 
