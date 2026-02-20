@@ -2,18 +2,17 @@ body{
     font-family: 'Roboto','Arial', sans-serif;
     margin: 0px;
 }
+
 .logo img{
     height: 75px;
     margin: 5px;
 }
+
 .container-header{
     background-color: white;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .fix-header{
@@ -49,14 +48,13 @@ body{
     border-style: ridge;
     border-color: navy;
     border-radius: 5px;
-    padding: 1px;
 }
 
 .search-button{
     height: 29px;
     width: 29px;
     background-color: transparent;
-    border-style: none;
+    border: none;
     position: relative;
     right: 28px;
 }
@@ -69,43 +67,6 @@ body{
     color: navy;
     text-decoration: none;
     font-size: 15px;
-    font-weight: 520;
-}
-
-/* footer */
-footer{
-    background-color: rgb(231, 236, 255);
-    margin-top: 10px;
-}
-
-
-.container-footer{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-}
-
-.chinh-sach{
-    line-height: 1.5;
-}
-
-.chinh-sach img{
-    height: 60px;
-}
-
-.thong-tin{
-    line-height: 1.7;
-}
-
-.icon{
-    margin-top: 16px;
-    display: flex;
-    justify-content: space-evenly
-}
-
-.icon img{
-    height: 40px;
-    
 }
 .container-gioithieu{
     display: flex;
@@ -113,7 +74,6 @@ footer{
     align-items: center;
     margin: 50px 100px;
 }
-
 .gioithieu-text{
     width: 55%;
     line-height: 1.6;
