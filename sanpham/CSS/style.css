@@ -1,9 +1,9 @@
-*{
+body{
     font-family: 'Roboto','Arial', sans-serif;
     margin: 0px;
-    padding: 0px;
+    display: flex;
+    flex-direction:column ;
 }
-
 .logo img{
     height: 75px;
     margin: 5px;
@@ -23,6 +23,7 @@
     top: 0px;
     z-index: 1000;
 }
+
 .nav a{
     color: navy;
     text-decoration: none;
@@ -30,10 +31,53 @@
     font-size: 20px;
     font-weight: 520;
 }
+
+.giohang{
+    width: 270px;
+    display: flex;
+    align-items: center;
+}
+
+.search-group{
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.search-input{
+    font-size: 13px;
+    height: 23px;
+    width: 180px;
+    border-style: ridge;
+    border-color: navy;
+    border-radius: 5px;
+    padding: 1px;
+    margin-top: 10px;
+}
+
+.search-button{
+    height: 29px;
+    width: 29px;
+    background-color: transparent;
+    border-style: none;
+    position: relative;
+    right: 28px;
+    margin-top: 10px;
+}
+
+.giohang-icon img{
+    height: 40px;
+}
+
+.giohang-letter{
+    color: navy;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 520;
+}
 .slider {
     width: 85%;
     overflow: hidden;
-    border: 2px solid black;
     margin: 0 auto;
 
 }
@@ -53,40 +97,129 @@
   100% { transform: translateX(-1600px); } 
 }
 article {
-    width: 1600px;
-    margin: 0px auto;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 20px;
+    
 }
 article h3 {
     font-size: 30px;
     font-weight: 1000;
+    text-emphasis-color: blue;
+    padding-left: 10px ;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 article h4 {
     font-size: 25px;
-    padding-left: 10px;
-}
-article h5 {
-    float: left;
-    font-size: 20px;
-    padding-left: 10px;
-}
-article h6 {
-    font-size: 20px;
-    text-align: right;
-    padding-right: 10px;
-}
-article .list {
-    width: 1600px;
+    padding-left: 10px ;
+    padding-bottom: 0;
+    padding-top: 0;
     
 }
-article .list .items {
+article .cost {
+    font-size: 20;
+    align-items:normal;
+    gap: 10px;
+    display: flex;
+}
+#gia_that{
+    color: red;
+    text-decoration-line: line-through;
+}
+.buttons {
+    display: flex;
+    height: 100px;
+    gap: 20%;
+    
+}
+article .cart_button {
+    background-color: orange;
+    color: brown;
+    text-transform: uppercase;
+    margin-left: 10px;
+    border-radius: 8px;
+    width: 40%;
+}
+article .buy_button {
+    background-color: green;
+    color: azure;
+    text-transform: uppercase;
+    margin-right: 10px;
+    float: right;
+    border-radius: 8px;
+    width: 40%;
+}
+article .cart_button:hover {
+    background-color: aqua;
+
+}
+article .buy_button:hover {
+    background-color: orangered;
+    color: white;
+}
+.list {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.items {
     width: 395px;
     float: left;    
     margin-right: 1px;
     border: 1px solid gray;
+    flex: 1 1 300px;
+    box-sizing: border-box;
+} 
+
+article .list .items #other{
+    width: 395px;    
+    margin-right: 1px;
+    float: inline-end;
+    border: 1px solid gray;
 }
 article .list .items img {
-    width: 395px;
-    height: 250px;
+    width: 100%;
+    height: auto;
     margin-right: 10px;
+}
+
+footer{
+    background-color: rgb(231, 236, 255);
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container-footer{
+    display: flex;
+    justify-content: space-evenly;
+    
+    padding: 20px;
+}
+
+.chinh-sach{
+    line-height: 1.5;
+}
+
+.chinh-sach img{
+    height: 60px;
+}
+
+.thong-tin{
+    line-height: 1.7;
+}
+
+.icon{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.icon img{
+    height: 40px;
+    
 }
