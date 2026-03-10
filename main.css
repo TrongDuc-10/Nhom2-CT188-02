@@ -107,24 +107,3 @@ footer{
     height: 40px;
     
 }
-.container-gioithieu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 50px 100px;
-}
-
-.gioithieu-text{
-    width: 55%;
-    line-height: 1.6;
-}
-
-.gioithieu-img{
-    width: 40%;
-    text-align: right;
-}
-
-.gioithieu-img img{
-    width: 100%;
-    height: auto;
-}
