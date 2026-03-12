@@ -1,0 +1,103 @@
+:root{
+    --navy-color: navy;
+    --light-bg: #f4f4f4;
+}
+
+body{
+    background-image: url("hinhanh/anh1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.login-container{
+    background-color: var(--light-bg);
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.login-box{
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.login-header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h2{
+    color: var(--navy-color);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.login-header p{
+    color: #666;
+    font-size: 14px;
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--navy-color);
+}
+
+.input-group input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-group input:focus{
+    outline: none;
+    border-color: var(--navy-color);
+}
+
+.login-button{
+    width: 100%;
+    padding: 14px;
+    background-color: var(--navy-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover{
+    background-color: #000066;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.login-footer{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.login-footer a{
+    color: var(--navy-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-footer a:hover{
+    text-decoration: underline;
+}
