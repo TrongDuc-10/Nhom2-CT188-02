@@ -2,20 +2,13 @@
     --navy-color: navy;
     --light-bg: #f4f4f4;
 }
-
-body{
-    background-image: url("hinhanh/anh1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 .login-container{
     background-color: var(--light-bg);
     padding: 80px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
+    min-height: calc(100vh - 80px);;
 }
 
 .login-box{
@@ -41,6 +34,15 @@ body{
 .login-header p{
     color: #666;
     font-size: 14px;
+}
+
+.name-group{
+    display: flex;
+    gap: 20px;
+}
+
+.name-group .input-group{
+    flex: 1;
 }
 
 .input-group{
