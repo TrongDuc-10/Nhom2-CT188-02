@@ -7,9 +7,43 @@
         width: 48%;
     }
 }
-@media (max-width: 480px) {
-    .items {                        /* Cho Điện thoại (màn hình dưới 480px - còn 1 cột) */
+@media (max-width: 480px) {   /* Cho điện thoại (màn hình dưới 480px) */
+    .items {                       
+        width: 90%;             
+        max-width: 350px;    
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
         width: 100%;
+    }
+    .goods_container .items img { 
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+    .buttons {
+        height: auto;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+    main .slider {
+        display: none;
+    }
+    .container_pagination {
+        display: block;        
+        width: 100%;     
+        margin-left: auto;       
+        margin-right: auto;     
+        padding: 0;             
+        margin-top: 40px;      
+        margin-bottom: 40px;
+    }
+    main .pagination {
+        display: flex;
+        width: fit-content;
+        margin: 0px auto;
     }
 }
 body{
@@ -29,7 +63,6 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .fix-header{
@@ -39,6 +72,7 @@ body{
 }
 
 .nav a{
+    display: flex;
     color: navy;
     text-decoration: none;
     padding: 18px;
@@ -47,7 +81,7 @@ body{
 }
 
 .giohang{
-    width: 270px;
+    max-width: 270px;
     display: flex;
     align-items: center;
 }
@@ -177,7 +211,7 @@ body{
     flex-wrap: wrap;
 }
 .items {
-    width: 395px;
+    max-width: 395px;
     float: left;    
     margin-right: 1px;
     border: 1px solid gray;
