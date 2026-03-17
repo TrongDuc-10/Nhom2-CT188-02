@@ -65,6 +65,12 @@ body{
     height: 40px;
 }
 
+.giohang-icon {
+    display: flex;
+    align-items: center; /* Căn icon và chữ thẳng hàng dọc */
+    white-space: nowrap; /* Ép chữ không được xuống dòng */
+}
+
 .giohang-letter{
     color: navy;
     text-decoration: none;
