@@ -173,4 +173,13 @@
 .them_vao_gio_hang:active{
     background-color: navy;
 }
-
+.nav_bar.active {
+    color: aliceblue;       
+    background-color: navy;   
+    border: 1px solid #444;
+}
+.nav_bar:hover:not(.active) {
+    background-color: navy;
+    color: aliceblue;
+    border-color: #666;
+}

@@ -6,8 +6,23 @@
     .items {                    /* Cho Tablet (màn hình dưới 768px) */
         width: 48%;
     }
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
 }
 @media (max-width: 480px) {   /* Cho điện thoại (màn hình dưới 480px) */
+    .fix-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .logo {
+        display: none;
+    }
     .items {                       
         width: 90%;             
         max-width: 350px;    
@@ -49,8 +64,6 @@
 body{
     font-family: 'Roboto','Arial', sans-serif;
     margin: 0px;
-    display: flex;
-    flex-direction:column ;
 }
 .logo img{
     height: 75px;
@@ -63,6 +76,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 
 .fix-header{
@@ -72,16 +86,24 @@ body{
 }
 
 .nav a{
-    display: flex;
     color: navy;
     text-decoration: none;
     padding: 18px;
     font-size: 20px;
     font-weight: 520;
 }
-
+.nav_bar.active {
+    color: aliceblue;       
+    background-color: navy;   
+    border: 1px solid #444;
+}
+.nav_bar:hover:not(.active) {
+    background-color: navy;
+    color: aliceblue;
+    border-color: #666;
+}
 .giohang{
-    max-width: 270px;
+    width: 270px;
     display: flex;
     align-items: center;
 }
@@ -100,7 +122,6 @@ body{
     border-color: navy;
     border-radius: 5px;
     padding: 1px;
-    margin-top: 10px;
 }
 
 .search-button{
@@ -110,11 +131,16 @@ body{
     border-style: none;
     position: relative;
     right: 28px;
-    margin-top: 10px;
 }
 
 .giohang-icon img{
     height: 40px;
+}
+
+.giohang-icon {
+    display: flex;
+    align-items: center; /* Căn icon và chữ thẳng hàng dọc */
+    white-space: nowrap; /* Ép chữ không được xuống dòng */
 }
 
 .giohang-letter{
@@ -122,6 +148,42 @@ body{
     text-decoration: none;
     font-size: 15px;
     font-weight: 520;
+}
+
+/* footer */
+footer{
+    background-color: rgb(231, 236, 255);
+    margin-top: 10px;
+}
+
+
+.container-footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.chinh-sach{
+    line-height: 1.5;
+}
+
+.chinh-sach img{
+    height: 60px;
+}
+
+.thong-tin{
+    line-height: 1.7;
+}
+
+.icon{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.icon img{
+    height: 40px;
+    
 }
 .goods_container, 
 .container-footer {
@@ -249,31 +311,4 @@ body{
     color: whitesmoke;
     border-color: #666;
 }
-footer{
-    background-color: rgb(231, 236, 255);
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-}
-.container-footer{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-}
-.chinh-sach{
-    line-height: 1.5;
-}
-.chinh-sach img{
-    height: 60px;
-}
-.thong-tin{
-    line-height: 1.7;
-}
-.icon{
-    margin-top: 16px;
-    display: flex;
-    justify-content: space-evenly
-}
-.icon img{
-    height: 40px;
-}
+
