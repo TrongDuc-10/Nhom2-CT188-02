@@ -173,7 +173,6 @@
 .them_vao_gio_hang:active{
     background-color: navy;
 }
-<<<<<<< HEAD
 .nav_bar.active {
     color: aliceblue;       
     background-color: navy;   
@@ -184,7 +183,6 @@
     color: aliceblue;
     border-color: #666;
 }
-=======
 .nav-mobile-btn {
   display: none;
 }
@@ -319,4 +317,3 @@
 }
 
   
->>>>>>> 4dfb7bf30370f6111369d8401c958cc9bc4ce335
