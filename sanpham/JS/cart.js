@@ -193,6 +193,7 @@ btnCheckout.addEventListener('click', function() {
             </tr>`
         ;
     });
+    alert('Thanh toán thành công! Đang tiến hành xuất hóa đơn...');
     let tongTienDep = tongTienToanBo.toLocaleString('vi-VN');
     const today = new Date();
     const dateString = today.toLocaleDateString('vi-VN'); 
@@ -256,7 +257,6 @@ btnCheckout.addEventListener('click', function() {
     const invoiceWindow = window.open('', '_blank', 'width=800,height=800');
     invoiceWindow.document.write(invoiceHTML);
     invoiceWindow.document.close();
-    alert('Thanh toán thành công! Đang tiến hành xuất hóa đơn...');
     localStorage.removeItem('vellaCart');
     hienThiGioHang();
     const cartModal = document.getElementById('cart-modal');
