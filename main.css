@@ -113,3 +113,70 @@ footer{
     height: 40px;
     
 }
+
+/* Thiết bị Tablet (Dưới 1024px)  */
+@media (max-width: 1024px) {
+    
+    .container-header {
+        flex-direction: column; 
+        padding: 10px;
+    }
+    .nav a{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    }
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Thiết bị Di động (Dưới 768px) */
+@media (max-width: 768px) {
+    .container-header {
+        flex-direction: column; 
+        padding: 10px;
+    }
+
+    .them_vao_gio_hang {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .nav-input {
+    display: none;
+    }
+    .nav-mobile-btn {
+        display: inline-block;
+        cursor: pointer;
+        padding: 5px;
+        order: 0;
+        margin-right: auto;
+    }
+    .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(217, 210, 255);
+        padding-top: 10px;
+        order: 3;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .nav-input:checked ~ .nav {
+        display: flex;
+    }
+}
