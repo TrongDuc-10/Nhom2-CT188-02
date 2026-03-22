@@ -132,6 +132,11 @@ footer{
     }
 }
 
+.nav-mobile-btn {
+  display: none;
+}
+
+
 /* Thiết bị Di động (Dưới 768px) */
 @media (max-width: 768px) {
     .container-header {
