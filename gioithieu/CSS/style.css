@@ -96,10 +96,9 @@ section h1{
 .fade-up {
     opacity: 0;
     transform: translateY(60px);
-
     animation: fadeUp linear forwards;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 50%;
 }
 
 /* Fade từ trái */
@@ -109,7 +108,7 @@ section h1{
 
     animation: fadeLeft linear forwards;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 50%;
 }
 
 /* Fade từ phải */
@@ -119,7 +118,7 @@ section h1{
 
     animation: fadeRight linear forwards;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 50%;
 }
 
 /* KEYFRAMES */
