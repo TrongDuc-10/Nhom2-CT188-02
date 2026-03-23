@@ -20,12 +20,15 @@
                     <img src="/images/logo2.png" alt="">
                 </a>
             </div>
+        <input type="checkbox" id="nav-mobile-input" class="nav-input" hidden />
+
+        <label for="nav-mobile-input" class="nav-mobile-btn"> &#9776; </label>
             <nav class="nav">
-                <a href="/trangchu.html">TRANG CHỦ</a>
-                <a href="/gioithieu/gioithieu.html">GIỚI THIỆU</a>
-                <a href="/sanpham/sanpham.html">SẢN PHẨM</a>
-                <a href="">ĐĂNG NHẬP</a>
-                <a href="">ĐĂNG KÍ</a>
+                <a class = "nav_bar active" href="/trangchu.html">TRANG CHỦ</a>
+                <a class = "nav_bar" href="/gioithieu/gioithieu.html">GIỚI THIỆU</a>
+                <a class = "nav_bar" href="/sanpham/sanpham.html">SẢN PHẨM</a>
+                <a class = "nav_bar" href="/dangnhap/dangnhap.html">ĐĂNG NHẬP</a>
+                <a class = "nav_bar" href="/dangky/dangky.html">ĐĂNG KÍ</a>
             </nav>
             <div class="giohang">
                 <form action="">
@@ -34,11 +37,9 @@
                         <button type="submit" class="search-button"><img src="/images/search_icon.png" ></button>
                     </div>
                 </form>
-                <div class="giohang-icon">
-                    <a href="">
-                        <img src="/images/giohang.png" alt=""><br>
-                    </a>
-                    <a class="giohang-letter" href="">Giỏ hàng</a>
+                <div class="giohang-icon" id="open-cart" style="cursor: pointer;">
+                     <a><img src="/images/giohang.png" alt=""></a>
+                     <a class="giohang-letter">Giỏ hàng</a>
                 </div>
             </div>
         </div>
@@ -74,37 +75,37 @@
                     <a class="xemtatca" href="">Xem tất cả ></a>
                 </div>
                 <div class="noidung-bestseller">
-                    <div class="sp">
-                        <img src="/trangchu/giuong_ngu.png" alt="">
+                    <div class="sp item">
+                        <img class="item-image" src="/trangchu/giuong_ngu.png" alt="">
                         <div>
-                            <h3>Giường Ngủ Gỗ Cao Su Veneer  Gỗ Sồi<br> Tự Nhiên</h3>
-                            <p class="gia-moi">4,990,000đ</p>
-                            <p class="gia-cu">6,990,000đ</p>
+                            <div class="item-id" hidden>BS001</div>
+                            <h3 class="item-name">Giường Ngủ Gỗ Cao Su Veneer  Gỗ Sồi<br> Tự Nhiên</h3>
+                            <p class="gia-moi item-price">4.990.000</p>
+                            <p class="gia-cu">6.990.000</p>
                         </div>
-                        <button class="them_vao_gio_hang" >Thêm vào giỏ hàng</button>
+                        <button class="them_vao_gio_hang cart_button" >Thêm vào giỏ hàng</button>
                     </div >
-                    <div class="sp">
-                        <img src="/trangchu/ban_an.png" alt="">
+                    <div class="sp item">
+                        <img class="item-image" src="/trangchu/ban_an.png" alt="">
                         <div>
-                            <h3>Bộ Bàn Ăn 4 Ghế Gỗ Tự Nhiên SCANIA<br>  (Màu Nâu - Mặt Vân Đá)</h3>
-                            <p class="gia-moi">6,490,000đ</p>
-                            <p class="gia-cu">8,650,000đ</p>
+                            <div class="item-id" hidden>BS002</div>
+                            <h3 class="item-name">Bộ Bàn Ăn 4 Ghế Gỗ Tự Nhiên SCANIA<br>  (Màu Nâu - Mặt Vân Đá)</h3>
+                            <p class="gia-moi item-price">6.490.000</p>
+                            <p class="gia-cu">8.650.000</p>
                         </div>
-                        <button class="them_vao_gio_hang" >Thêm vào giỏ hàng</button>
+                        <button class="them_vao_gio_hang cart_button" >Thêm vào giỏ hàng</button>
                     </div>
-                    <div class="sp">
-                        <img src="/trangchu/sofa.png" alt="">
+                    <div class="sp item">
+                        <img class="item-image" src="/trangchu/sofa.png" alt="">
                         <div>
-                            <h3>Ghế Sofa Góc Chữ L Gỗ Cao Su Tự Nhiên <br>VELLA</h3>
-                            <p class="gia-moi">8,990,000đ</p>
-                            <p class="gia-cu">10,990,000đ</p>
+                            <div class="item-id" hidden>BS003</div>
+                            <h3 class="item-name">Ghế Sofa Góc Chữ L Gỗ Cao Su Tự Nhiên <br>VELLA</h3>
+                            <p class="gia-moi item-price">8.990.000</p>
+                            <p class="gia-cu">10.990.000</p>
                         </div>
-                        <button class="them_vao_gio_hang" >Thêm vào giỏ hàng</button>
+                        <button class="them_vao_gio_hang cart_button" >Thêm vào giỏ hàng</button>
                     </div>
                 </div>
-            </section>
-            <section>
-
             </section>
         </article>
     </main>
@@ -133,7 +134,21 @@
                 </div>
             </div>
         </div>
-        
     </footer>
+    <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close-cart">&times;</span> <h2>Giỏ hàng của bạn</h2>
+        
+        <div id="cart-items-list">
+            </div>
+
+        <div class="cart-total">
+            <strong>Tổng tiền: </strong> <span id="total-price">0</span> VNĐ
+        </div>
+        
+        <button class="checkout-btn">Tiến hành thanh toán</button>
+    </div>
+    </div>
+    <script src="/sanpham/JS/cart.js"></script> <!-- Tận dụng JS của trang sanpham-->
 </body>
 </html>

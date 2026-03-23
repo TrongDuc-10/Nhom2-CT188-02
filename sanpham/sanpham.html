@@ -10,12 +10,12 @@
         rel="stylesheet">
     <title>Sản phẩm</title>
     <link rel="shortcut icon" href="/images/logo1.png">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/CSS/trangchu.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/trangchu/trangchu.css">
     <link rel="stylesheet" href="/sanpham/CSS/style.css" 
 </head>
 
-<body>
+<body class = "wrapper">
     <header class="fix-header">
         <div class="container-header">
             <div class="logo">
@@ -23,12 +23,15 @@
                     <img src="/images/logo2.png" alt="">
                 </a>
             </div>
+        <input type="checkbox" id="nav-mobile-input" class="nav-input" hidden />
+
+        <label for="nav-mobile-input" class="nav-mobile-btn"> &#9776; </label>
             <nav class="nav">
-                <a href="/trangchu.html">TRANG CHỦ</a>
-                <a href="">GIỚI THIỆU</a>
-                <a href="/sanpham/sanpham.html">SẢN PHẨM</a>
-                <a href="">ĐĂNG NHẬP</a>
-                <a href="">ĐĂNG KÍ</a>
+                <a class = "nav_bar" href="/trangchu.html">TRANG CHỦ</a>
+                <a class = "nav_bar" href="/gioithieu/gioithieu.html">GIỚI THIỆU</a>
+                <a class = "nav_bar active" href="/sanpham/sanpham.html">SẢN PHẨM</a>
+                <a class = "nav_bar" href="/dangnhap/dangnhap.html">ĐĂNG NHẬP</a>
+                <a class = "nav_bar" href="/dangky/dangky.html">ĐĂNG KÍ</a>
             </nav>
             <div class="giohang">
                 <form action="">
@@ -37,8 +40,8 @@
                         <button type="submit" class="search-button"><img src="/images/search_icon.png"></button>
                     </div>
                 </form>
-                <div class="giohang-icon">
-                    <a href="">
+                <div class="giohang-icon" id = "open-cart" style="cursor: pointer;">
+                    <a>
                         <img src="/images/giohang.png" alt=""><br>
                     </a>
                     <a class="giohang-letter" href="">Giỏ hàng</a>
@@ -47,70 +50,77 @@
         </div>
     </header>
 
-    <main>
-        <div class="slider">
-            <div class="slides">
-                <a href=""><img src="/sanpham/images/Ban_ghe_1.jpg" alt=""></a>
-                <a href=""><img src="/sanpham/images/Ban_ghe_2.jpg" alt=""></a>
-                <a href=""><img src="/sanpham/images/Ban_ghe_3.jpg" alt=""></a>
-                <a href=""><img src="/sanpham/images/Ban_ghe_4.jpg" alt=""></a>
-                <a href=""><img src="/sanpham/images/Ban_ghe_5.jpg" alt=""></a>
-                <a href=""><img src="/sanpham/images/Ban_ghe_6.jpg" alt=""></a>
-                <a href=""><img src="/sanpham/images/Ban_ghe_1.jpg" alt=""></a>
-                <a href=""><img src="/sanpham/images/Ban_ghe_2.jpg" alt=""></a>
-                <a href=""><img src="/sanpham/images/Ban_ghe_3.jpg" alt=""></a>
-                <a href=""><img src="/sanpham/images/Ban_ghe_4.jpg" alt=""></a>
-                <a href=""><img src="/sanpham/images/Ban_ghe_5.jpg" alt=""></a>
-                <a href=""><img src="/sanpham/images/Ban_ghe_6.jpg" alt=""></a>
+    <main class="page-main">
+        <div class="container_slider">
+            <div class="slider">
+                <div class="slides">
+                    <a href=""><img src="/sanpham/images/Ban_ghe_1.jpg" alt=""></a>
+                    <a href=""><img src="/sanpham/images/Ban_ghe_2.jpg" alt=""></a>
+                    <a href=""><img src="/sanpham/images/Ban_ghe_3.jpg" alt=""></a>
+                    <a href=""><img src="/sanpham/images/Ban_ghe_4.jpg" alt=""></a>
+                    <a href=""><img src="/sanpham/images/Ban_ghe_5.jpg" alt=""></a>
+                    <a href=""><img src="/sanpham/images/Ban_ghe_6.jpg" alt=""></a>
+                    <a href=""><img src="/sanpham/images/Ban_ghe_1.jpg" alt=""></a>
+                    <a href=""><img src="/sanpham/images/Ban_ghe_2.jpg" alt=""></a>
+                    <a href=""><img src="/sanpham/images/Ban_ghe_3.jpg" alt=""></a>
+                    <a href=""><img src="/sanpham/images/Ban_ghe_4.jpg" alt=""></a>
+                    <a href=""><img src="/sanpham/images/Ban_ghe_5.jpg" alt=""></a>
+                    <a href=""><img src="/sanpham/images/Ban_ghe_6.jpg" alt=""></a>
+                </div>
             </div>
         </div>
 
-        <article>
-            <h3>Bàn ghế</h3>
-            <div class="list">
-                <div class="items">
-                    <img src="/sanpham/images/Ban_ghe_1.jpg" alt="">
-                    <h4>Tên sản phẩm</h4>
-                    <div class="cost">
-                        <h5>Giá:</h5>
-                        <h5 id="gia_that">7.000.000.000</h5>
+        <div class="goods_container">
+            <div class="container">
+                <div class="item">
+                    <img class="item-image"src="/sanpham/images/Ban_ghe_1.jpg" alt="">
+                    <div class="item-info">
+                        <div class="item-id" hidden>001</div>
+                        <div class="item-name">Bàn ăn</div>
+                        <div class="item-price">7.000.000.000</div>
                     </div>
-                    <div class="buttons">
+                    <div class="item-button">
                         <button type="submit" class="cart_button">Thêm vào giỏ hàng</button>
                         <button type="submit" class="buy_button">Mua</button>
                     </div>
-                  
                 </div>
-                <div class="items">
-                    <img src="/sanpham/images/Ban_ghe_2.jpg" alt="">
-                    <h4>Tên sản phẩm</h4>
-                    <div class="cost">
-                        <h5>Giá</h5>
-                        <h6>...</h6>
+                <div class="item">
+                    <img class="item-image"src="/sanpham/images/Ban_ghe_1.jpg" alt="">
+                    <div class="item-info">
+                        <div class="item-id" hidden>002</div>
+                        <div class="item-name">Ghế ăn</div>
+                        <div class="item-price">8.888.000.000</div>
+                    </div>
+                    <div class="item-button">
+                        <button type="submit" class="cart_button">Thêm vào giỏ hàng</button>
+                        <button type="submit" class="buy_button">Mua</button>
                     </div>
                 </div>
-                <div class="items">
-                    <img src="/sanpham/images/Ban_ghe_3.jpg" alt="">
-                    <h4>Tên sản phẩm</h4>
-                    <div class="cost">
-                        <h5>Giá</h5>
-                        <h6>...</h6>
+                <div class="item">
+                    <img class="item-image"src="/sanpham/images/Ban_ghe_1.jpg" alt="">
+                    <div class="item-info">
+                        <div class="item-id" hidden>003</div>
+                        <div class="item-name">Bàn ghế</div>
+                        <div class="item-price">7.999.000.000</div>
                     </div>
-                </div>
-                <div class="items">
-                    <img src="/sanpham/images/Ban_ghe_4.jpg" alt="">
-                    <h4>Tên sản phẩm</h4>
-                    <div class="cost">
-                        <h5>Giá</h5>
-                        <h6>...</h6>
+                    <div class="item-button">
+                        <button type="submit" class="cart_button">Thêm vào giỏ hàng</button>
+                        <button type="submit" class="buy_button">Mua</button>
                     </div>
                 </div>
             </div>
-        </article>
-
+        </div>
+        <div class="container_pagination">
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link next-page">&raquo;</a>
+            </div>
+        </div>
     </main>
     <footer>
-        <div class="container-footer" >
+        <div class="container-footer">
             <div class="chinh-sach">
                 <h1>Chính sách</h1>
                 <p>Chính sách mua hàng</p>
@@ -134,8 +144,23 @@
                 </div>
             </div>
         </div>
-        
     </footer>
+    <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close-cart">&times;</span> <h2>Giỏ hàng của bạn</h2>
+        
+        <div id="cart-items-list">
+            </div>
+
+        <div class="cart-total">
+            <strong>Tổng tiền: </strong> <span id="total-price">0</span> VNĐ
+        </div>
+        
+        <button class="checkout-btn">Tiến hành thanh toán</button>
+    </div>
+</div>
+    <script src="/sanpham/JS/cart.js"></script>
 </body>
+
 
 </html>

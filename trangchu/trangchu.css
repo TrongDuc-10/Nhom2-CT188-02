@@ -60,6 +60,7 @@
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 
 }
 
@@ -143,14 +144,23 @@
 }
 
 .gia-moi{
+    margin: 12px;
     color: red;
-    font-size: 20px;
+    font-size: 26px;
+    font-weight: bolder;
 }
 
 .gia-cu{
+    margin: auto;
     color: grey;
     text-decoration: line-through;
-    font-size: 17px;
+    font-size: 20px;
+}
+
+.gia-cu::after,.gia-moi::after {
+    content: " VNĐ";
+    font-size: 0.9em; 
+    color: inherit;  
 }
 
 .them_vao_gio_hang{
@@ -173,4 +183,237 @@
 .them_vao_gio_hang:active{
     background-color: navy;
 }
+.nav_bar.active {
+    color: aliceblue;       
+    background-color: navy;   
+    border: 1px solid #444;
+}
+.nav_bar:hover:not(.active) {
+    background-color: navy;
+    color: aliceblue;
+    border-color: #666;
+}
+.nav-mobile-btn {
+  display: none;
+}
 
+
+
+  
+/* chức năng thêm giỏ hàng */
+.cart-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+}
+.cart-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto; 
+}
+.close-cart {
+    color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;
+}
+.cart-item-row {
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid #eee; padding: 10px 0;
+}
+.cart-item-row img {
+    width: 60px; height: 60px; object-fit: cover; border-radius: 4px;
+}
+.checkout-btn {
+    width: 100%; background-color: green; color: white;
+    padding: 12px; border: none; border-radius: 8px;
+    margin-top: 20px; font-weight: bold; cursor: pointer;
+}
+
+
+/* Thêm transitions */
+
+
+.sp {
+    transition: transform 0.3s , box-shadow 0.3s ; /* Tạo sự mượt mà */
+}
+
+.sp:hover {
+    transform: translateY(-10px); /* Nhích nhẹ lên trên */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Thêm đổ bóng cho nổi bật */
+}
+
+.sp img {
+    transition: transform 0.5s ;
+}
+
+.sp:hover img {
+    transform: scale(1.05); /* Ảnh phóng to nhẹ bên trong khung */
+}
+
+/* Hiệu ứng cho chữ trong Banner */
+.tieude-banner {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.danhmucphong div {
+    position: relative;
+    overflow: hidden; /* Để ảnh không tràn ra ngoài khi phóng to */
+}
+
+.danhmucphong img {
+    transition: filter 0.3s ease, transform 0.5s ease;
+}
+
+.danhmucphong div:hover img {
+    filter: brightness(70%); /* Làm tối ảnh một chút */
+    transform: scale(1.05);
+}
+
+.danhmucphong h2 {
+    transition: background-color 0.3s ease;
+}
+
+.danhmucphong div:hover h2 {
+    background-color: navy; /* Đổi màu tiêu đề khi di chuột vào vùng đó */
+}
+
+
+/* Thiết bị Tablet (Dưới 1024px)  */
+@media (max-width: 1024px) {
+    .tieude-banner {
+        left: 5%; 
+        top: 50px;
+    }
+
+    .b1 { font-size: 35px; }
+    .b2 { font-size: 40px; }
+    
+    .danhmucphong {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .danhmucphong img {
+        width: 300px; 
+        height: 350px;
+    }
+
+    .noidung-bestseller {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .container-header {
+        flex-direction: column; 
+        padding: 10px;
+    }
+    .nav a{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    }
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Thiết bị Di động (Dưới 768px) */
+@media (max-width: 768px) {
+    .container-header {
+        flex-direction: column; 
+        padding: 10px;
+    }
+
+    .anh-banner {
+        height: 300px; 
+    }
+
+    .tieude-banner {
+        left: 20px;
+        top: 30px;
+    }
+    .tieude-banner a{
+        font-size: 16px;
+    }
+
+    .b1 { font-size: 20px; }
+    .b2 { font-size: 24px; }
+    .b3 { font-size: 16px; }
+    .b4 {  margin-top: 20px; }
+
+    .danhmucphong div {
+        width: 100%; 
+    }
+
+    .danhmucphong img {
+        width: 100%;
+        height: auto;
+    }
+
+    .noidung-bestseller .sp {
+        width: 95%;
+    }
+
+    .noidung-bestseller img {
+        width: 100%;
+        height: auto;
+    }
+
+    .them_vao_gio_hang {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+/* footer chung */
+    .container-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+/* nav chung */
+    .nav a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .nav-input {
+    display: none;
+    }
+    .nav-mobile-btn {
+        display: inline-block;
+        cursor: pointer;
+        padding: 5px;
+        order: 0;
+        margin-right: auto;
+    }
+    .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(217, 210, 255);
+        padding-top: 10px;
+        order: 3;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .nav-input:checked ~ .nav {
+        display: flex;
+    }
+}
