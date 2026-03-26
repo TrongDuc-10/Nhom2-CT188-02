@@ -25,6 +25,7 @@ body{
     font-size: 20px;
     font-weight: 520;
 }
+
 .nav_bar.active {
     color: aliceblue;       
     background-color: navy;   
@@ -149,14 +150,15 @@ footer{
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 12px;
     width: 100%;
     justify-content: flex-start;
+    margin-bottom: 5%;
 }
 .container .item {
     flex: 0 1 calc(33.33% - 20px); 
     min-width: 280px;              
-    padding: 15px;
+    padding: 8px;
     border: 3px solid rgb(180, 170, 170);
     box-sizing: border-box;        
     border-radius: 8px;
@@ -166,9 +168,39 @@ footer{
     height: 250px;
     display: block;
     object-fit: contain;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 15px;
+}
+.item .item-info {
+    justify-content: center;
+    padding: 2%;
+}
+.item .item-name {
+    display: flex;
+    justify-content: center;
+}
+.item p{
+    font-family: 'Nunito';
+    display: inline-flex;
+    justify-content: center;
+}
+
+.item #non-discount{
+    color: red;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.item #discount{
+    margin: auto;
+    color: grey;
+    text-decoration: line-through;
+    font-size: 17px;
+}
+
+#non-discount::after,#discount::after {
+    content: " VNĐ";
+    font-size: 0.9em; 
+    color: inherit;  
 }
 .pagination {
     display: flex;
@@ -294,7 +326,7 @@ footer{
 @media (max-width: 768px) {
     .container {
         flex-wrap: wrap; 
-        justify-content: center; 
+        justify-content: center;
     }
 
     .container .item { 
@@ -361,6 +393,35 @@ footer{
         display: flex;
         width: fit-content;
         margin: 0px auto;
+    }
+    .nav a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .nav-input {
+    display: none;
+    }
+    .nav-mobile-btn {
+        display: inline-block;
+        cursor: pointer;
+        padding: 5px;
+        order: 0;
+        margin-right: auto;
+    }
+    .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(217, 210, 255);
+        padding-top: 10px;
+        order: 3;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .nav-input:checked ~ .nav {
+        display: flex;
     }
 }
 
