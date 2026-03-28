@@ -1,8 +1,8 @@
 const addCartButtons = document.querySelectorAll('.cart_button');
 
-addCartButtons.forEach(function(button) {
-    button.addEventListener('click', function(event) {
-        event.preventDefault(); 
+addCartButtons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+        event.preventDefault();
 
         const productItem = event.target.closest('.item');
 
@@ -16,12 +16,12 @@ addCartButtons.forEach(function(button) {
             name: name,
             price: price,
             image: image,
-            quantity: 1 
+            quantity: 1
         };
 
         let cart = JSON.parse(localStorage.getItem('vellaCart')) || [];
 
-        const checkItem = cart.find(function(item) {
+        const checkItem = cart.find(function (item) {
             return item.id === product.id;
         });
 
@@ -43,29 +43,39 @@ const btnCloseCart = document.querySelector('.close-cart');
 const cartItemsList = document.getElementById('cart-items-list');
 const totalPriceElement = document.getElementById('total-price');
 
-btnOpenCart.addEventListener('click', function() {
-    cartModal.style.display = 'block'; 
-    hienThiGioHang(); 
+btnOpenCart.addEventListener('click', function () {
+    cartModal.style.display = 'block';
+    hienThiGioHang();
 });
 
-btnCloseCart.addEventListener('click', function() {
+btnCloseCart.addEventListener('click', function () {
     cartModal.style.display = 'none';
 });
 
 function hienThiGioHang() {
     let cart = JSON.parse(localStorage.getItem('vellaCart')) || [];
-    
+
     cartItemsList.innerHTML = '';
     let tongTien = 0;
 
     if (cart.length === 0) {
-        cartItemsList.innerHTML = '<p style="text-align:center;">Giỏ hàng trống trơn. Hãy mua vài bộ bàn ghế nhé!</p>';
+        cartItemsList.innerHTML = '<p style="text-align:center;">Giỏ hàng trống trơn. Hãy thêm vào giỏ hàng một thứ gì đó nhé!</p>';
         totalPriceElement.innerText = '0';
-        return; 
+        return;
     }
-
-    cart.forEach(function(item) {
-        let giaTienSo = parseInt(item.price.replace(/\./g, '')); 
+cartItemsList.addEventListener('click', function (event) {
+        if (event.target.classList.contains('delete-item-btn')) {
+            const idCanXoa = event.target.getAttribute('data-id');
+            let cart = JSON.parse(localStorage.getItem('vellaCart')) || [];
+            cart = cart.filter(function (item) {
+                return item.id !== idCanXoa;
+            });
+            localStorage.setItem('vellaCart', JSON.stringify(cart));
+            hienThiGioHang();
+        }
+    });
+    cart.forEach(function (item) {
+        let giaTienSo = parseInt(item.price.replace(/\./g, ''));
         tongTien += giaTienSo * item.quantity; // Cộng dồn tiền
 
         const div = document.createElement('div');
@@ -76,9 +86,11 @@ function hienThiGioHang() {
                 <p style="margin: 0; font-weight: bold; color: #333;">${item.name}</p>
                 <p style="margin: 5px 0 0 0; color: #ff4d4d;">Giá: ${item.price} VNĐ</p>
             </div>
-            <div style="font-weight: bold;">SL: ${item.quantity}</div>`
-        ;
-        
+            <div style="font-weight: bold; margin-right: 15px;">SL: ${item.quantity}</div>
+            
+            <button class="delete-item-btn" data-id="${item.id}" style="background-color: #ff4d4d; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold;">Xóa</button>`
+            ;
+
         cartItemsList.appendChild(div);
     });
 
@@ -87,9 +99,9 @@ function hienThiGioHang() {
 
 const buyButtons = document.querySelectorAll('.buy_button');
 
-buyButtons.forEach(function(btnBuy) {
-    btnBuy.addEventListener('click', function(event) {
-        event.preventDefault(); 
+buyButtons.forEach(function (btnBuy) {
+    btnBuy.addEventListener('click', function (event) {
+        event.preventDefault();
 
         const productItem = event.target.closest('.item');
         const name = productItem.querySelector('.item-name').innerText;
@@ -100,9 +112,9 @@ buyButtons.forEach(function(btnBuy) {
         const invoiceWindow = window.open('', '_blank', 'width=700,height=700');
 
         const today = new Date();
-        const dateString = today.toLocaleDateString('vi-VN'); 
+        const dateString = today.toLocaleDateString('vi-VN');
 
-        const invoiceHTML = 
+        const invoiceHTML =
             `<html>
             <head>
                 <title>Hóa Đơn - Nội thất Vella</title>
@@ -157,46 +169,46 @@ buyButtons.forEach(function(btnBuy) {
                 </script>
             </body>
             </html>`
-        ;
+            ;
 
         invoiceWindow.document.write(invoiceHTML);
-        invoiceWindow.document.close(); 
+        invoiceWindow.document.close();
     });
 });
 
 const btnCheckout = document.querySelector('.checkout-btn');
-btnCheckout.addEventListener('click', function() {
+btnCheckout.addEventListener('click', function () {
     let cart = JSON.parse(localStorage.getItem('vellaCart')) || [];
 
     if (cart.length === 0) {
         alert('Giỏ hàng của bạn đang trống. Hãy chọn mua sản phẩm trước nhé!');
-        return; 
+        return;
     }
 
     let danhSachSanPhamHTML = '';
     let tongTienToanBo = 0;
 
-    cart.forEach(function(item) {
+    cart.forEach(function (item) {
         let giaTienSo = parseInt(item.price.replace(/\./g, ''));
         let thanhTienItem = giaTienSo * item.quantity;
-        
+
         tongTienToanBo += thanhTienItem;
 
         let thanhTienDep = thanhTienItem.toLocaleString('vi-VN');
 
-        danhSachSanPhamHTML += 
+        danhSachSanPhamHTML +=
             `<tr>
                 <td>${item.name}</td>
                 <td style="text-align: center;">${item.quantity}</td>
                 <td style="text-align: right;">${item.price}</td>
                 <td style="text-align: right;">${thanhTienDep} VNĐ</td>
             </tr>`
-        ;
+            ;
     });
     alert('Thanh toán thành công! Đang tiến hành xuất hóa đơn...');
     let tongTienDep = tongTienToanBo.toLocaleString('vi-VN');
     const today = new Date();
-    const dateString = today.toLocaleDateString('vi-VN'); 
+    const dateString = today.toLocaleDateString('vi-VN');
     const invoiceHTML = `
         <html>
         <head>
@@ -253,7 +265,7 @@ btnCheckout.addEventListener('click', function() {
             </script>
         </body>
         </html>`
-    ;
+        ;
     const invoiceWindow = window.open('', '_blank', 'width=800,height=800');
     invoiceWindow.document.write(invoiceHTML);
     invoiceWindow.document.close();
