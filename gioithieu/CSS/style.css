@@ -22,7 +22,7 @@
     color: white;
 }
 
-/* Lớp phủ tối */
+/* Lớp phủ tối cho hình*/
 .banner-gioithieu::before {
     content: "";
     position: absolute;
