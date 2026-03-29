@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+    <!-- meta và responsive -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <title>Giới Thiệu</title>
     <link rel="shortcut icon" href="/images/logo1.png">
+
+    <!-- liên hệ với CSS -->
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+    <!-- header -->
     <header class="fix-header">
         <div class="container-header">
+        
             <div class="logo">
                 <a href="/trangchu.html">
                     <img src="/images/logo2.png" alt="">
                 </a>
             </div>
+         <!-- Menu mobile -->
         <input type="checkbox" id="nav-mobile-input" class="nav-input" hidden />
-
+        
         <label for="nav-mobile-input" class="nav-mobile-btn"> &#9776; </label>
+
+        <!-- Thanh điều hướng -->
             <nav class="nav">
                 <a class = "nav_bar" href="/trangchu.html">TRANG CHỦ</a>
                 <a class = "nav_bar active" href="/gioithieu/gioithieu.html">GIỚI THIỆU</a>
@@ -30,6 +39,7 @@
                 <a class = "nav_bar" href="/dangnhap/dangnhap.html">ĐĂNG NHẬP</a>
                 <a class = "nav_bar" href="/dangky/dangky.html">ĐĂNG KÍ</a>
             </nav>
+            <!-- Giỏ hàng + tìm kiếm -->
             <div class="giohang">
                 <form action="">
                     <div class="search-group">
@@ -47,6 +57,7 @@
         </div>
 </header>
 
+<!--main --> <!--có transition cho hình ảnh và chữ qua class="" -->
 <main>
     
     <section class="banner-gioithieu">
@@ -73,16 +84,18 @@
                 <p class="fade-left highlight">
                     VELLA DESIGN – Đồng hành cùng bạn kiến tạo không gian sống lý tưởng!
                 </p>
+            <!-- Hình ảnh (có thể click về trang chủ) -->
             </div>
             <a href="/trangchu.html" class="image sp fade-right">
                 <img src="hinhanh/gioithieu.png" alt="">
             </a>
         </div>
     </section>
-
+    
+<!-- Timeline giới thiệu hình thành-->
     <section>
         <h1 class="fade-up">Về Chúng Tôi</h1>
-        <div class="content custom2">
+        <div>
             <div class="timeline">
                 <ul>
                     <li>
@@ -174,6 +187,8 @@
         </div>
     </section>
 </main>
+
+<!-- footer -->
     <footer>
         <div class="container-footer" >
             <div class="chinh-sach">
