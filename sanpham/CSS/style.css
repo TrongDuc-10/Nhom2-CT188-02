@@ -1,3 +1,5 @@
+/* Trên đây là phần làm chung của header bao gồm logo, nav bar, thanh tìm kiếm, nút giỏ hàng. */
+
 .items { width: 31%; }      
 body{
     font-family: 'Roboto','Arial', sans-serif;
@@ -116,6 +118,11 @@ footer{
     height: 40px;
     
 }
+
+
+/* Đây là phần CSS của em. */
+
+/*Slide ảnh trang trí để giới thiệu sơ lược sản phẩm của web*/
 .slider {
     max-width: 1200px;
     width: 90%;
@@ -134,16 +141,19 @@ footer{
     height: 250px;
     border: solid 2px red;
 }
+/* Lệnh này để slide chạy, khi hết ảnh sẽ quay lại từ đầu. */
 @keyframes scroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-1600px); } 
 }
-.goods_container, 
-.container-footer {
+
+/* Phần này là phần chứa sản phẩm */
+.goods_container {
     max-width: 1200px;  
     width: 90%;          
     margin: 0 auto;      
 }
+/* display flex và để cho phần con của container ở giữa */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -159,13 +169,12 @@ footer{
     border: 3px solid rgb(180, 170, 170);
     box-sizing: border-box;        
     border-radius: 8px;
-    transition: all 0.3s ease;
 }
 .container .item img { 
     width: 100%;
     height: 250px;
     display: block;
-    object-fit: contain;
+    object-fit: contain;   
     margin-bottom: 15px;
 }
 .item .item-info {
@@ -175,19 +184,21 @@ footer{
 .item .item-name {
     display: flex;
     justify-content: center;
+    font-weight: 800;
+    font-size: 16px;
 }
 .item p{
     font-family: 'Nunito';
     display: inline-flex;
     justify-content: center;
 }
-
+/* Giá lúc giảm*/
 .item #discount{
     color: red;
     font-size: 22px;
     font-weight: bolder;
 }
-
+/* Giá lúc chưa giảm sẽ có đường gạch ngang */
 .item #non-discount{
     margin: auto;
     color: grey;
@@ -200,6 +211,7 @@ footer{
     font-size: 0.9em; 
     color: inherit;  
 }
+/* Thanh đánh số trang nếu trang có nhiều sản phẩm sẽ đem qua các trang khác*/
 .pagination {
     display: flex;
     justify-content: center; 
@@ -221,10 +233,12 @@ footer{
     font-size: 18px;
     transition: 0.3s;        
 }
+/* Khi đang đứng tại page x thì chữ số x sẽ đỏ lên */
 .page-link.active {
     color: #ff4d4d;          
     border: 1px solid #444;
 }
+/* Khi không đứng ở page x mà lại đưa chuột vào vùng của nó thì nó sẽ đỏ nút đó lên */
 .page-link:hover:not(.active) {
     background-color: red;
     color: whitesmoke;
@@ -235,6 +249,7 @@ footer{
     height: 100px;
     gap: 20%;
 }
+/* Nút thêm vào giỏ hàng và nút mua tương tự nhau nhưng khác màu */
 .cart_button {
     background-color: navy;
     color: white;
@@ -248,10 +263,10 @@ footer{
     color: azure;
     text-transform: uppercase;
     margin-right: 10px;
-    float: right;
     border-radius: 8px;
-    width: 50%;
+    width: 70%;
 }
+/* Chạm vào sẽ đổi màu */
 .cart_button:hover {
     background-color: aqua;
 
@@ -260,7 +275,7 @@ footer{
     background-color: orangered;
     color: white;
 }
-
+/* Hộp thoại giỏ hàng, để ẩn khi nào bấm vào giỏ hàng mới hiện ra */
 .cart-modal {
     display: none; 
     position: fixed; 
@@ -281,8 +296,6 @@ footer{
     max-height: 80vh;
     overflow-y: auto; 
 }
-
-
 .close-cart {
     color: #aaa;
     float: right;
@@ -290,11 +303,9 @@ footer{
     font-weight: bold;
     cursor: pointer;
 }
-
 .close-cart:hover { 
     color: red; 
 }
-
 .cart-item-row {
     display: flex;
     justify-content: space-between;
@@ -302,14 +313,12 @@ footer{
     border-bottom: 1px solid #eee;
     padding: 10px 0;
 }
-
 .cart-item-row img {
     width: 60px;
     height: 60px;
     object-fit: cover;
     border-radius: 4px;
 }
-
 .checkout-btn {
     width: 100%;
     background-color: green;
@@ -321,6 +330,11 @@ footer{
     font-weight: bold;
     cursor: pointer;
 }
+.container-footer {
+    max-width: 1200px;  
+    width: 90%;          
+    margin: 0 auto;      
+}
 @media (max-width: 768px) {
     .container {
         flex-wrap: wrap; 
@@ -330,6 +344,9 @@ footer{
     .container .item { 
         flex: 0 1 calc(50% - 20px); 
         min-width: 250px;
+    }
+    .item .item-name {
+    font-size: 14px;
     }
 }
 
