@@ -52,9 +52,9 @@
                 <h2>ĐĂNG NHẬP</h2>
                 <p>Chào mừng bạn quay trở lại với VELLA</p>
             </div>
-            <form action="">
+            <form id="loginForm">
                 <div class="input-group">
-                    <label for="email">Email / Số điện thoại</label>
+                    <label for="email">Email / Số điện thoại</label> 
                     <input type="text" id="email" placeholder="Nhập email hoặc SĐT" required>
                 </div>
                 <div class="input-group">
@@ -98,5 +98,35 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Tìm và lưu trữ Form đăng nhập vào biến loginForm để thao tác bằng cách sử dụng getElementById() với id của form là 'loginForm'
+        const loginForm = document.getElementById('loginForm');
+        
+        // Định nghĩa hàm check email
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Biểu thức định dạng cơ bản cho Email
+            return emailRegex.test(email); // Sử dụng phương thức .test() để kiểm tra chuỗi nhập vào có khớp Regex không
+        }
+        // Lắng nghe sự kiện submit của khi nhấn nút đăng nhập
+        loginForm.addEventListener('submit', function(event) {
+            
+            event.preventDefault(); // Chặn load lại trang
+
+            const email = document.getElementById('email').value; // Lấy giá trị email từ ô nhập liệu
+            const password = document.getElementById('password').value; // Lấy giá trị mật khẩu từ ô nhập liệu
+
+            //Kiểm tra trống
+            if (email.trim() === "" || password.trim() === "") { // Sử dụng hàm trim() để loại bỏ khoảng trắng ở đầu và cuối
+                alert("Vui lòng nhập đầy đủ Email và Mật khẩu!");
+            } 
+            //Kiểm tra định dạng email
+            else if (!validateEmail(email)) {
+                alert("Email không hợp lệ! Vui lòng kiểm tra lại (Ví dụ: vella@gmail.com)");
+            } 
+            else {
+                alert("Bạn đã gửi dữ liệu thành công. Xin cảm ơn!");
+            }
+        });
+    </script>
 </body>
 </html>
