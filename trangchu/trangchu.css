@@ -1,3 +1,4 @@
+/* design cho section banner */
 .banner{
     position: relative;
 }
@@ -52,7 +53,7 @@
     margin-top: 50px;
 }
 
-
+/* design cho section danhmucphong */
 
 .danhmucphong{
     max-width: 1300px;
@@ -77,6 +78,8 @@
     height: 450px;
     object-fit: cover;
 }
+
+/* design cho section best-seller */
 
 .best-seller{
     max-width: 1300px;
@@ -128,16 +131,16 @@
     
 }
 
-.sp {
+.item {
     padding: 10px;
 }
 
-.sp h3{
+.item h3{
     font-family: 'Nunito';
     font-size: 20px;
 }
 
-.sp p{
+.item p{
     font-family: 'Nunito';
     display: inline-block;
     padding-right: 10px;
@@ -183,6 +186,8 @@
 .them_vao_gio_hang:active{
     background-color: navy;
 }
+
+
 .nav_bar.active {
     color: aliceblue;       
     background-color: navy;   
@@ -193,6 +198,7 @@
     color: aliceblue;
     border-color: #666;
 }
+
 .nav-mobile-btn {
   display: none;
 }
@@ -238,21 +244,21 @@
 /* Thêm transitions */
 
 
-.sp {
-    transition: transform 0.3s , box-shadow 0.3s ; /* Tạo sự mượt mà */
+.item {
+    transition: transform 0.3s , box-shadow 0.3s ; 
 }
 
-.sp:hover {
-    transform: translateY(-10px); /* Nhích nhẹ lên trên */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Thêm đổ bóng cho nổi bật */
+.item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
 }
 
-.sp img {
+.item img {
     transition: transform 0.5s ;
 }
 
-.sp:hover img {
-    transform: scale(1.05); /* Ảnh phóng to nhẹ bên trong khung */
+.item:hover img {
+    transform: scale(1.05); 
 }
 
 /* Hiệu ứng cho chữ trong Banner */
@@ -273,7 +279,7 @@
 
 .danhmucphong div {
     position: relative;
-    overflow: hidden; /* Để ảnh không tràn ra ngoài khi phóng to */
+    overflow: hidden; 
 }
 
 .danhmucphong img {
@@ -281,7 +287,7 @@
 }
 
 .danhmucphong div:hover img {
-    filter: brightness(70%); /* Làm tối ảnh một chút */
+    filter: brightness(70%); 
     transform: scale(1.05);
 }
 
@@ -290,7 +296,7 @@
 }
 
 .danhmucphong div:hover h2 {
-    background-color: navy; /* Đổi màu tiêu đề khi di chuột vào vùng đó */
+    background-color: navy; 
 }
 
 
@@ -367,7 +373,7 @@
         height: auto;
     }
 
-    .noidung-bestseller .sp {
+    .noidung-bestseller .item {
         width: 95%;
     }
 
@@ -381,12 +387,12 @@
         margin-left: 0;
         margin-right: 0;
     }
-/* footer chung */
+
     .container-footer {
         flex-direction: column;
         text-align: center;
     }
-/* nav chung */
+
     .nav a {
         padding: 10px;
         font-size: 16px;
