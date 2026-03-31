@@ -113,3 +113,17 @@
     color: aliceblue;
     border-color: #666;
 }
+
+.input-group.error input {
+    border-color: red;
+}
+
+.input-group.success input {
+    border-color: green;
+}
+
+.message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
