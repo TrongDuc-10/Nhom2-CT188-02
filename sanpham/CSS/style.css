@@ -214,7 +214,7 @@ footer{
     font-size: 0.9em; 
     color: inherit;  
 }
-/* Thanh đánh số trang nếu trang có nhiều sản phẩm sẽ đem qua các trang khác*/
+/* Thanh phân trang nếu trang có nhiều sản phẩm sẽ đem qua các trang khác*/
 .pagination {
     display: flex;
     justify-content: center; 
@@ -236,12 +236,12 @@ footer{
     font-size: 18px;
     transition: 0.3s;        
 }
-/* Khi đang đứng tại page x thì chữ số x sẽ đỏ lên */
+/* Khi đang đứng tại trang x thì chữ số x sẽ đỏ lên */
 .page-link.active {
     color: #ff4d4d;          
     border: 1px solid #444;
 }
-/* Khi không đứng ở page x mà lại đưa chuột vào vùng của nó thì nó sẽ đỏ nút đó lên */
+/* Khi không đứng ở trang x mà lại đưa chuột vào vùng của nó thì nó sẽ đỏ nút đó lên */
 .page-link:hover:not(.active) {
     background-color: red;
     color: whitesmoke;
