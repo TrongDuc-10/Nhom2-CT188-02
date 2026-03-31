@@ -1,4 +1,4 @@
-/* design cho section banner */
+/* --- ĐỊNH DẠNG BANNER TRANG CHỦ --- */
 .banner{
     position: relative;
 }
@@ -7,7 +7,7 @@
     height: 550px;
     object-fit: cover;
 }
-
+/* Căn chỉnh vị trí chữ trên Banner */
 .tieude-banner{
     position: absolute;
     top: 80px;
@@ -53,7 +53,7 @@
     margin-top: 50px;
 }
 
-/* design cho section danhmucphong */
+/* --- DANH MỤC PHÒNG --- */
 
 .danhmucphong{
     max-width: 1300px;
@@ -130,7 +130,7 @@
     border-radius: 10px;
     
 }
-
+/* --- PHẦN SẢN PHẨM (ITEM) --- */
 .item {
     padding: 10px;
 }
@@ -159,7 +159,7 @@
     text-decoration: line-through;
     font-size: 20px;
 }
-
+/* Tự động thêm chữ VNĐ sau giá tiền */
 .gia-cu::after,.gia-moi::after {
     content: " VNĐ";
     font-size: 0.9em; 
@@ -285,7 +285,7 @@
 .danhmucphong img {
     transition: filter 0.3s ease, transform 0.5s ease;
 }
-
+/* Hiệu ứng Zoom ảnh khi di chuột vào danh mục phòng */
 .danhmucphong div:hover img {
     filter: brightness(70%); 
     transform: scale(1.05);

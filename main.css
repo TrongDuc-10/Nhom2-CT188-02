@@ -4,10 +4,12 @@ body{
     font-family: 'Roboto','Arial', sans-serif;
     margin: 0px;
 }
+/* Định dạng Logo trong Header */
 .logo img{
     height: 75px;
     margin: 5px;
 }
+/* Container cho Header: Dùng Flexbox để căn chỉnh các phần tử */
 .container-header{
     background-color: white;
     margin-left: auto;
@@ -17,13 +19,13 @@ body{
     align-items: center;
 
 }
-
+/* Giữ Header luôn nằm ở trên cùng khi cuộn trang */
 .fix-header{
     position: sticky;
     top: 0px;
     z-index: 1000;
 }
-
+/* Kiểu dáng cho các link trong Menu chính */
 .nav a{
     color: navy;
     text-decoration: none;
@@ -31,7 +33,7 @@ body{
     font-size: 20px;
     font-weight: 520;
 }
-
+/* --- PHẦN TÌM KIẾM VÀ GIỎ HÀNG --- */
 .giohang{
     width: 270px;
     display: flex;
