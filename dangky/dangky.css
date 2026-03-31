@@ -1,16 +1,25 @@
+/* Phần CSS cho trang Đăng Ký (dangky.css):
+   - Định nghĩa biến màu và nền
+   - Bố cục container, hộp form, tiêu đề
+   - Kiểu cho input, nút và trạng thái validation */
+
+/* Biến CSS chung (màu nền, màu chủ đạo) */
 :root{
     --navy-color: navy;
     --light-bg: #f4f4f4;
 }
+
+/* Container chính: căn giữa phần đăng ký */
 .login-container{
     background-color: var(--light-bg);
     padding: 80px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px);;
+    min-height: calc(100vh - 80px);
 }
 
+/* Hộp form: nền trắng, bo góc và shadow */
 .login-box{
     background-color: white;
     width: 100%;
@@ -20,35 +29,38 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+/* Tiêu đề form */
 .login-header{
     text-align: center;
     margin-bottom: 30px;
 }
-
 .login-header h2{
+    /* Kiểu cho tiêu đề H2 trong header của form */
     color: var(--navy-color);
     font-size: 28px;
     margin-bottom: 10px;
 }
-
 .login-header p{
+    /* Kiểu cho mô tả ngắn bên dưới tiêu đề */
     color: #666;
     font-size: 14px;
 }
 
+/* Nhóm Họ/Tên đặt cạnh nhau trên màn hình rộng */
 .name-group{
     display: flex;
     gap: 20px;
 }
-
+/* Tăng tỷ lệ cho mỗi input-group trong hàng Họ/Tên */
 .name-group .input-group{
     flex: 1;
 }
 
+/* Kiểu chung cho input group */
 .input-group{
     margin-bottom: 20px;
 }
-
+/* Kiểu cho label của mỗi input */
 .input-group label{
     display: block;
     margin-bottom: 8px;
@@ -64,12 +76,13 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
+/* Hiệu ứng khi input được focus */
 .input-group input:focus{
     outline: none;
     border-color: var(--navy-color);
 }
 
+/* Nút đăng ký */
 .login-button{
     width: 100%;
     padding: 14px;
@@ -82,34 +95,50 @@
     cursor: pointer;
     transition: 0.3s;
 }
-
 .login-button:hover{
+    /* Hiệu ứng hover cho nút đăng ký */
     background-color: #000066;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .login-footer{
+    /* Phần dưới form: liên kết Đăng nhập */
     text-align: center;
     margin-top: 25px;
     font-size: 14px;
 }
-
 .login-footer a{
+    /* Kiểu của link trong footer */
     color: var(--navy-color);
     font-weight: bold;
     text-decoration: none;
 }
-
 .login-footer a:hover{
     text-decoration: underline;
 }
+
 .nav_bar.active {
-    color: aliceblue;       
-    background-color: navy;   
+    color: aliceblue;
+    background-color: navy;
     border: 1px solid #444;
 }
 .nav_bar:hover:not(.active) {
+    /* Kiểu hover cho item menu khi không active */
     background-color: navy;
     color: aliceblue;
     border-color: #666;
+}
+/* màu thông báo khi có lỗi/sai định dạng (đỏ) */
+.input-group.error input {
+    border-color: red;
+}
+/* màu thông báo khi không có lỗi (xanh) */
+.input-group.success input {
+    border-color: green;
+}
+
+.message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
 }
