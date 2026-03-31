@@ -21,7 +21,7 @@
                     <img src="/images/logo2.png" alt="Logo">
                 </a>
             </div>
-            <input type="checkbox" id="nav-mobile-input" class="nav-input" hidden />
+        <input type="checkbox" id="nav-mobile-input" class="nav-input" hidden />
 
         <label for="nav-mobile-input" class="nav-mobile-btn"> &#9776; </label>
             <nav class="nav">
@@ -46,6 +46,7 @@
         </div>
     </header>
 
+    <!-- Nội dung chính: form đăng ký tài khoản -->
     <main class = "login-container">
         <div class = "login-box">
             <div class = "login-header">
@@ -54,6 +55,7 @@
             </div>
             <form id = "register-form" action="">
                 <div class = "name-group">
+                <!-- Nhóm input cho họ và tên -->
                     <div class = "input-group">
                         <label for="first-name">Họ</label>
                         <input type="text" id="first-name" placeholder="Nhập họ" required>
@@ -65,26 +67,31 @@
                         <small class = "message"></small>
                     </div>
                 </div>
+                <!-- Nhóm input cho số điện thoại -->
                 <div class = "input-group">
                     <label for="number">Số điện thoại</label>
                     <input type="text" id="number" placeholder="Nhập số điện thoại" required>
                     <small class = "message"></small>
                 </div>
+                <!-- Nhóm input cho emaIL -->
                 <div class = "input-group">
                     <label for="email">Địa chỉ email</label>
                     <input type="email" id="email" placeholder="Nhập địa chỉ email" required>
                     <small class = "message"></small>
                 </div>
+                <!-- Nhóm input cho mật khẩu -->
                 <div class = "input-group">
                     <label for="password">Mật khẩu</label>
                     <input type="password" id="password" placeholder="Nhập mật khẩu" required>
                     <small class = "message"></small>
                 </div>
+                <!-- Nhóm input xác nhận mật khẩu -->
                 <div class = "input-group">
                     <label for="confirm-password">Xác nhận mật khẩu</label>
                     <input type="password" id="confirm-password" placeholder="Xác nhận mật khẩu" required>
                     <small class = "message"></small>
                 </div>
+                <!-- Nút submit -->
                 <button type="submit" class="login-button">Đăng ký</button>
             </form>
             <div class="login-footer">
